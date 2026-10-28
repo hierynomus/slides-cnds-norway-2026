@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
       - run: bun install --frozen-lockfile
-      - run: bun run build --base /cnds-norway-2026-slides/ --out ../dist
+      - run: bun run build --base /{{ github.repository }}/ --out ../dist
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
